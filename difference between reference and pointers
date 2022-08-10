@@ -1,0 +1,41 @@
+#include <iostream>
+
+#define Log(var) std::cout<<x<<std::endl
+
+void Increment(int value)
+{
+	value++;
+} /* when we use the function by value
+  it copies a new value in this function
+  */
+void Increment_pointers(int* value)
+{
+	(* value)++;// the () is necessary because of the priority
+} /*we pass the memory address instead of the value*/
+void Increment_references(int& value)
+{
+	value++;
+}
+int main()
+{
+	int a = 5;
+	int* b = &a;
+	Log(a);
+	/*once we assign a reference we cannot cange it, for example
+	int a=8;
+	int* ref=a;
+	ref=b 
+	just b=a and it doesn't change the reference*/
+
+	/*we can switch between references only with a pointer:
+	int a=8;
+	int* ref=&a
+	ref=&b
+	*/
+	Increment_pointers(&a)
+	Increment_references(a)
+	Log(a)
+	std::cin:get()
+
+
+}
