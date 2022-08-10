@@ -1,0 +1,46 @@
+#include <iostream>
+class Player
+{ /*how visible the thing are, by default is private!!!*/
+public:
+	int x, y;
+	int speed;
+	void Move(int xa, int ya) //we are inside the class so we 
+		//dont need to pass the object
+	{
+		x += xa;
+		y += ya;
+	}
+
+};
+struct Playerer
+{ /*how visible the thing are, by default is private!!!*/
+	int x, y;
+	int speed;
+	void Move(int xa, int ya) //we are inside the class so we 
+		//dont need to pass the object
+	{
+		x += xa;
+		y += ya;
+	}
+};
+
+struct vect2
+{
+
+};
+//note the braces
+/*
+void Move(Player& references, int xa, int ya) //we are passing by reference because 
+							  we want to modify it!
+{
+	references.x += xa;
+	references.y += ya;
+}
+*/
+int main()
+{
+	Player Licia;
+	Licia.x = 5;
+	Licia.Move(5,6);
+	
+}
